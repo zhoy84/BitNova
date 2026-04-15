@@ -1,0 +1,2502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitNova (BN) | The Next Generation Layer 1</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f3c977'/%3E%3Cstop offset='100%25' style='stop-color:%23ffd991'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='45' font-weight='bold' text-anchor='middle' fill='%2317120b'%3EBN%3C/text%3E%3C/svg%3E">
+    <script>
+        // ========== 在这里修改社交链接 ==========
+        const config = {
+            twitter: "https://twitter.com/bitnova",  // 修改推特链接
+            telegram: "https://t.me/bitnova"         // 修改电报链接
+        };
+        // ======================================
+        
+        // ========== 中英切换功能 ==========
+        const i18n = {
+            en: {
+                // Nav
+                about: "About",
+                features: "Features", 
+                technology: "Technology",
+                roadmap: "Roadmap",
+                faq: "FAQ",
+                launch_app: "Launch App",
+                // Hero
+                hero_title_1: "The Next Generation",
+                hero_title_2: "Layer 1",
+                hero_title_3: "Infrastructure",
+                hero_desc: "BitNova is a high-performance Layer 1 blockchain built for the future of Web3. With groundbreaking consensus, sub-second finality, and enterprise-grade infrastructure.",
+                explore: "Follow Twitter",
+                whitepaper: "Join Telegram",
+                // Stats
+                tps: "TPS",
+                tvl: "Total Value Locked",
+                dapps: "DApps",
+                finality: "Finality",
+                // Marquee
+                marquee: ["100K+ TPS", "Sub-Second Finality", "EVM Compatible", "Cross-Chain Bridge", "Enterprise Grade"],
+                // About
+                about_title: "About BitNova",
+                about_subtitle: "Building the infrastructure for a decentralized future",
+                // Features
+                features_tag: "CORE FEATURES",
+                features_title: "Built for the Next Generation Blockchain",
+                // Tech
+                tech_tag: "TECHNOLOGY",
+                tech_title: "Cutting-Edge Infrastructure",
+                // Roadmap
+                roadmap_tag: "ROADMAP",
+                roadmap_title: "Our Journey Forward",
+                // Community
+community_tag: "COMMUNITY",
+                community_title: "Join the BitNova Community",
+                // Features
+                features_desc: "BitNova combines cutting-edge technology with enterprise-grade infrastructure to deliver a high-performance Layer 1 blockchain.",
+                feature1_title: "High-Throughput Consensus",
+                feature1_desc: "Innovative consensus mechanism delivers 100K+ TPS with sub-second finality.",
+                feature2_title: "EVM Compatible",
+                feature2_desc: "Seamlessly migrate existing dApps and developer tools from Ethereum.",
+                feature3_title: "Low Fees",
+                feature3_desc: "Transaction fees as low as $0.001, making high-frequency use cases viable.",
+                feature4_title: "Enterprise Grade",
+                feature4_desc: "Built for institutional adoption with compliance-ready infrastructure.",
+                feature5_title: "Cross-Chain Bridge",
+                feature5_desc: "Seamlessly transfer assets across multiple blockchain networks.",
+                feature6_title: "Decentralized Governance",
+                feature6_desc: "Community-driven protocol decisions through transparent on-chain voting mechanisms.",
+                // Tech
+                tech_subtitle: "Powered by advanced technology stack designed for performance, security, and scalability.",
+                tech1_tag: "CONSENSUS",
+                tech1_title: "High-Throughput Consensus Engine",
+                tech1_desc: "BitNova's innovative Proof-of-Stake consensus mechanism delivers 100,000+ TPS with sub-second finality. Validators are randomly selected through cryptographic sortition, ensuring both high performance and true decentralization.",
+                tech1_stat1: "TPS Capacity",
+                tech1_stat2: "Finality",
+                tech2_tag: "EXECUTION",
+                tech2_title: "EVM-Compatible Runtime",
+                tech2_desc: "Fully compatible with Ethereum Virtual Machine, BitNova supports all Solidity smart contracts without code changes. Our optimized execution engine delivers 10x faster contract execution while maintaining bytecode-level compatibility.",
+                tech2_stat1: "EVM Compatible",
+                tech2_stat2: "Faster Execution",
+                tech3_tag: "INTEROPERABILITY",
+                tech3_title: "Native Cross-Chain Bridge",
+                tech3_desc: "BitNova's native cross-chain messaging protocol enables seamless asset transfers and message passing between Ethereum, Bitcoin, and other major Layer 1 networks. Built on threshold signature technology for maximum security.",
+                tech3_stat1: "Chains",
+                tech3_stat2: "Bridge Time",
+                tech_cta: "Explore Documentation →",
+                // Roadmap
+                roadmap_subtitle: "A clear path to building the most comprehensive Layer 1 blockchain infrastructure.",
+                rm1_phase: "Phase 1",
+                rm1_title: "Foundation",
+                rm1_items: ["Core protocol development", "Security audits completed", "Token generation event", "Initial DEX offering"],
+                rm2_phase: "Phase 2",
+                rm2_title: "Expansion",
+                rm2_items: ["Multi-chain deployment", "Governance launch", "Strategic partnerships", "100K users milestone"],
+                rm3_phase: "Phase 3",
+                rm3_title: "Innovation",
+                rm3_items: ["Sharding implementation V2", "Cross-chain bridges", "Institutional products", "Mobile wallet launch"],
+                rm4_phase: "Phase 4",
+                rm4_title: "Domination",
+                rm4_items: ["DAO treasury expansion", "Real-world asset integration", "Layer 2 deployment", "Global expansion"],
+                // Community
+                community_desc: "Connect with thousands of users, developers, and enthusiasts building the future of decentralized finance together.",
+                newsletter_title: "Stay Updated",
+                newsletter_desc: "Subscribe to our newsletter for the latest updates and announcements.",
+                newsletter_placeholder: "Enter your email",
+                newsletter_btn: "Subscribe →",
+                // Footer
+                footer_desc: "The next-generation Layer 1 blockchain infrastructure. Powering high-performance Web3 applications with 100K+ TPS, sub-second finality, and seamless cross-chain interoperability.",
+                footer_protocol: "Protocol",
+                footer_protocol_items: ["About", "Ecosystem", "Technology", "Roadmap"],
+                footer_resources: "Resources",
+                footer_resource_items: ["Documentation", "Whitepaper", "Audit Reports", "Brand Assets"],
+                // Toast
+                launch_toast: "Coming Soon",
+            },
+            zh: {
+                // Nav
+                about: "关于我们",
+                features: "特性",
+                technology: "技术",
+                roadmap: "路线图",
+                faq: "常见问题",
+                launch_app: "启动应用",
+                // Hero
+                hero_title_1: "新一代",
+                hero_title_2: "Layer 1",
+                hero_title_3: "基础设施",
+                hero_desc: "BitNova 是高性能 Layer 1 区块链，为 Web3 的未来而建。拥有突破性共识机制、亚秒级最终性和企业级基础设施。",
+                explore: "关注推特",
+                whitepaper: "加入电报",
+                // Stats
+                tps: "每秒交易数",
+                tvl: "总锁仓量",
+                dapps: "去中心化应用",
+                finality: "最终性",
+                // Marquee
+                marquee: ["100K+ TPS", "亚秒级最终性", "EVM 兼容", "跨链桥接", "企业级"],
+                // Section tags
+                features_tag: "核心特性",
+                tech_tag: "技术",
+                roadmap_tag: "路线图",
+                community_tag: "社区",
+                // Features
+                features_title: "为新一代区块链打造",
+                features_desc: "BitNova 结合前沿技术与企业级基础设施，打造高性能 Layer 1 区块链。",
+                feature1_title: "高吞吐共识",
+                feature1_desc: "创新共识机制实现 100K+ TPS 和亚秒级最终性。",
+                feature2_title: "EVM 兼容",
+                feature2_desc: "无缝迁移以太坊现有 dApp 和开发者工具。",
+                feature3_title: "低手续费",
+                feature3_desc: "交易费低至 $0.001，使高频用例成为可能。",
+                feature4_title: "企业级安全",
+                feature4_desc: "为机构采用而生，具备合规就绪的基础设施。",
+                feature5_title: "跨链桥接",
+                feature5_desc: "无缝在多条区块链网络之间转移资产。",
+                feature6_title: "去中心化治理",
+                feature6_desc: "通过透明的链上投票机制实现社区驱动的协议决策。",
+                // Tech
+                tech_title: "前沿基础设施",
+                tech_subtitle: "由先进技术栈驱动，专为性能、安全和可扩展性而设计。",
+                tech1_tag: "共识引擎",
+                tech1_title: "高通量共识引擎",
+                tech1_desc: "BitNova 的创新权益证明共识机制实现 100,000+ TPS 和亚秒级最终性。验证者通过加密抽签随机选择，确保高性能和真正的去中心化。",
+                tech1_stat1: "TPS 容量",
+                tech1_stat2: "最终性",
+                tech2_tag: "执行层",
+                tech2_title: "EVM 兼容运行时",
+                tech2_desc: "完全兼容以太坊虚拟机，BitNova 支持所有 Solidity 智能合约，无需代码修改。优化的执行引擎在保持字节码级兼容性的同时，合约执行速度提升 10 倍。",
+                tech2_stat1: "EVM 兼容",
+                tech2_stat2: "执行速度提升",
+                tech3_tag: "互操作性",
+                tech3_title: "原生跨链桥",
+                tech3_desc: "BitNova 的原生跨链消息协议实现以太坊、比特币等主流 Layer 1 网络之间的无缝资产转移和消息传递。基于门限签名技术实现最高安全性。",
+                tech3_stat1: "支持链数",
+                tech3_stat2: "跨链时间",
+                tech_cta: "查看文档",
+                // Roadmap
+                roadmap_title: "我们的前进之路",
+                roadmap_subtitle: "构建最全面 Layer 1 区块链基础设施的清晰路径。",
+                rm1_phase: "第一阶段",
+                rm1_title: "基础",
+                rm1_items: ["核心协议开发", "安全审计完成", "代币生成事件", "首次 DEX 发行"],
+                rm2_phase: "第二阶段",
+                rm2_title: "扩展",
+                rm2_items: ["多链部署", "治理启动", "战略合作", "10万用户里程碑"],
+                rm3_phase: "第三阶段",
+                rm3_title: "创新",
+                rm3_items: ["分片实现 V2", "跨链桥接", "机构级产品", "移动钱包上线"],
+                rm4_phase: "第四阶段",
+                rm4_title: "主导",
+                rm4_items: ["DAO 国库扩展", "真实世界资产集成", "Layer 2 部署", "全球扩展"],
+                // Community
+                community_title: "加入 BitNova 社区",
+                community_desc: "与数千名用户、开发者和爱好者一起构建去中心化金融的未来。",
+                newsletter_title: "保持更新",
+                newsletter_desc: "订阅我们的通讯以获取最新更新和公告。",
+                newsletter_placeholder: "输入您的邮箱",
+                newsletter_btn: "订阅",
+                // Footer
+                footer_desc: "新一代 Layer 1 区块链基础设施。以 100K+ TPS、亚秒级最终性和无缝跨链互操作性驱动高性能 Web3 应用。",
+                footer_protocol: "协议",
+                footer_protocol_items: ["关于", "生态", "技术", "路线图"],
+                footer_resources: "资源",
+                footer_resource_items: ["文档", "白皮书", "审计报告", "品牌资产"],
+                // Toast
+                launch_toast: "敬请期待",
+            }
+        };
+        
+        let currentLang = 'en';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            updateLanguage();
+        }
+        
+        function updateLanguage() {
+            const lang = i18n[currentLang];
+            
+            // Update language button text
+            const btn = document.querySelector('.lang-switch .lang-text');
+            if (btn) btn.textContent = currentLang === 'en' ? '中文' : 'EN';
+            
+            // Update page title
+            document.title = currentLang === 'en' ? 'BitNova (BN) | The Next Generation Layer 1' : 'BitNova (BN) | 新一代 Layer 1 基础设施';
+            
+            // Update all data-i18n text elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (lang[key] !== undefined) {
+                    el.textContent = lang[key];
+                }
+            });
+            
+            // Update data-i18n-placeholder elements (for inputs)
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (lang[key] !== undefined) {
+                    el.placeholder = lang[key];
+                }
+            });
+            
+            // Update data-i18n-list elements (for arrays like roadmap items)
+            document.querySelectorAll('[data-i18n-list]').forEach(el => {
+                const key = el.getAttribute('data-i18n-list');
+                const items = lang[key];
+                if (Array.isArray(items)) {
+                    const lis = el.querySelectorAll('li');
+                    items.forEach((text, i) => {
+                        if (lis[i]) lis[i].textContent = text;
+                    });
+                }
+            });
+            
+            // Update hero buttons (these have href links so handled separately)
+            const heroBtns = document.querySelectorAll('.hero-buttons .btn');
+            if (heroBtns[0]) heroBtns[0].textContent = lang.explore;
+            if (heroBtns[1]) heroBtns[1].textContent = lang.whitepaper;
+            
+            // Update stat labels (these are indexed)
+            const statLabels = document.querySelectorAll('.stat-label');
+            if (statLabels[0]) statLabels[0].textContent = lang.tps;
+            if (statLabels[1]) statLabels[1].textContent = lang.tvl;
+            if (statLabels[2]) statLabels[2].textContent = lang.dapps;
+            if (statLabels[3]) statLabels[3].textContent = lang.finality;
+            
+            // Update marquee items
+            const marqueeItems = document.querySelectorAll('.marquee-track span');
+            lang.marquee.forEach((text, i) => {
+                if (marqueeItems[i]) marqueeItems[i].textContent = text;
+            });
+            
+            // Update tech stat labels (nested structure)
+            const techCards = document.querySelectorAll('.tech-card');
+            techCards.forEach((card, idx) => {
+                const statLabels = card.querySelectorAll('.tech-stat-label');
+                const tagKey = 'tech' + (idx + 1) + '_stat1';
+                if (statLabels[0] && lang[tagKey]) statLabels[0].textContent = lang[tagKey];
+                const tagKey2 = 'tech' + (idx + 1) + '_stat2';
+                if (statLabels[1] && lang[tagKey2]) statLabels[1].textContent = lang[tagKey2];
+            });
+            
+            // Save preference
+            localStorage.setItem('bitnova-lang', currentLang);
+        }
+        
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const saved = localStorage.getItem('bitnova-lang');
+            if (saved) {
+                currentLang = saved;
+                updateLanguage();
+            }
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg: #060606;
+            --bg-soft: #0a0a0a;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-strong: rgba(255, 255, 255, 0.06);
+            --line: rgba(243, 201, 119, 0.2);
+            --text: #f7f1e3;
+            --muted: rgba(247, 241, 227, 0.72);
+            --soft: rgba(247, 241, 227, 0.5);
+            --gold: #f3c977;
+            --gold-strong: #ffd991;
+            --primary: #6366f1;
+            --accent: #ec4899;
+            --shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+            --radius-lg: 28px;
+            --radius-md: 20px;
+            --radius-sm: 16px;
+            --max-width: 1220px;
+            --transition: 240ms ease;
+        }
+        
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-width: 320px;
+        }
+        
+        /* Background Effects */
+        .particle-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: -6;
+            pointer-events: none;
+        }
+        
+        .pointer-glow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            margin-left: -150px;
+            margin-top: -150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(243, 201, 119, 0.15), transparent 70%);
+            filter: blur(40px);
+            opacity: 0;
+            transition: opacity 300ms ease;
+            pointer-events: none;
+            z-index: -2;
+        }
+        
+        .page-noise {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        
+        .page-glow {
+            position: fixed;
+            z-index: -3;
+            border-radius: 999px;
+            filter: blur(80px);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .glow-a {
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(243, 201, 119, 0.12);
+        }
+        
+        .glow-b {
+            right: -100px;
+            top: 300px;
+            width: 500px;
+            height: 500px;
+            background: rgba(99, 102, 241, 0.1);
+        }
+        
+        .page-grid {
+            position: fixed;
+            inset: 0;
+            z-index: -4;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 92%);
+            pointer-events: none;
+        }
+        
+        a { text-decoration: none; color: inherit; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header - Pill Style */
+        .site-header {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.25rem;
+            width: min(calc(100% - 2rem), var(--max-width));
+            padding: 0.75rem 1.25rem;
+            border: 1px solid rgba(243, 201, 119, 0.15);
+            border-radius: 999px;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .brand-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+        
+        .brand-monogram {
+            display: inline-grid;
+            place-items: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 1px solid rgba(243, 201, 119, 0.4);
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 30%, rgba(255, 217, 145, 0.25), transparent 58%), rgba(255, 255, 255, 0.03);
+            color: var(--gold-strong);
+            font-size: 0.9rem;
+            font-weight: 800;
+            box-shadow: 0 0 20px rgba(243, 201, 119, 0.2);
+        }
+        
+        .brand-copy strong {
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--text);
+        }
+        
+        .brand-copy small {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--muted);
+        }
+        
+        .site-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .site-nav a {
+            position: relative;
+            font-size: 0.85rem;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color var(--transition);
+            font-weight: 500;
+        }
+        
+        .site-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform var(--transition);
+        }
+        
+        .site-nav a:hover {
+            color: var(--gold-strong);
+        }
+        
+        .site-nav a:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .header-cta {
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(135deg, var(--gold-strong), var(--gold));
+            color: #17120b;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all var(--transition);
+            box-shadow: 0 4px 20px rgba(243, 201, 119, 0.3);
+        }
+        
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(243, 201, 119, 0.4);
+        }
+        
+        /* Language Switch Button - Fixed Bottom Right */
+        .lang-switch {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(243, 201, 119, 0.4);
+            border-radius: 999px;
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(243, 201, 119, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .lang-switch:hover {
+            background: rgba(243, 201, 119, 0.15);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(243, 201, 119, 0.2);
+        }
+        .lang-switch .lang-icon {
+            font-size: 1.1rem;
+        }
+        
+        /* Toast Notification */
+        .toast-notification {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background: linear-gradient(135deg, var(--gold-strong), var(--gold));
+            color: #17120b;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            z-index: 10000;
+            opacity: 0;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(243, 201, 119, 0.4);
+            pointer-events: none;
+        }
+        .toast-notification.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        /* Legacy support */
+        header, .header-inner, .logo, .logo-icon, nav, .header-buttons {
+            display: none;
+        }
+        
+        nav {
+            display: flex;
+            gap: 32px;
+        }
+        
+        nav a {
+            color: var(--muted);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover { color: var(--foreground); }
+        
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--foreground);
+        }
+        
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover { background: var(--primary-dark); }
+        
+        /* Marquee Band */
+        .marquee-band {
+            overflow: hidden;
+            background: linear-gradient(90deg, transparent, rgba(243, 201, 119, 0.05), transparent);
+            padding: 1rem 0;
+            border-top: 1px solid rgba(243, 201, 119, 0.1);
+            border-bottom: 1px solid rgba(243, 201, 119, 0.1);
+            margin-top: 100px;
+        }
+        
+        .marquee-track {
+            display: flex;
+            animation: marquee 30s linear infinite;
+            width: fit-content;
+        }
+        
+        .marquee-track span {
+            padding: 0 3rem;
+            font-size: 0.875rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            white-space: nowrap;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Typography */
+        .eyebrow {
+            margin: 0 0 1rem;
+            color: var(--gold);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        
+        h1, h2.hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        
+        /* Enhanced Card Hover Effects */
+        .feature-card, .tech-card {
+            transition: transform 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease;
+        }
+        
+        .feature-card:hover, .tech-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(243, 201, 119, 0.3);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(243, 201, 119, 0.08);
+        }
+        
+        /* Enhanced Buttons */
+        .btn {
+            transition: all 0.24s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(243, 201, 119, 0.35);
+            letter-spacing: 0.03em;
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            padding-top: 64px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+        
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            right: 25%;
+            top: 50%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+        
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        .hero-visual {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .hero-visual img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+        
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 700;
+            line-height: 1.1;
+            max-width: 100%;
+            margin: 0;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: var(--muted);
+            max-width: 100%;
+            margin: 24px 0;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: flex-start;
+            margin-top: 40px;
+        }
+        
+        .hero-buttons .btn {
+            padding: 14px 28px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+            max-width: 100%;
+        }
+        
+        .stat {
+            text-align: left;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 40px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            padding-top: 8px;
+        }
+        
+        .scroll-indicator::after {
+            content: '';
+            width: 4px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 2px;
+            animation: scroll 1.5s infinite;
+        }
+        
+        @keyframes scroll {
+            0%, 100% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(8px); opacity: 0.5; }
+        }
+        
+        /* Section */
+        section { padding: 100px 0; }
+        
+        .section-header {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 0 60px 0;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .section-header p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+        
+        /* Features */
+        #ecosystem { background: var(--background); }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-4px);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            right: -30px;
+            top: -30px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover::before { transform: scale(1.5); }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .feature-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+        
+        /* Technology */
+        #technology {
+            background: linear-gradient(180deg, var(--background), rgba(39, 39, 42, 0.3), var(--background));
+        }
+        
+        .tech-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .tech-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            align-items: center;
+        }
+        
+        .tech-card:nth-child(even) { direction: rtl; }
+        .tech-card:nth-child(even) > * { direction: ltr; }
+        
+        .tech-card .tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+        
+        .tech-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .tech-card > div > p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        
+        .tech-stats {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .tech-stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .tech-stat-label {
+            font-size: 14px;
+            color: var(--muted);
+        }
+        
+        .tech-visual {
+            aspect-ratio: 16/9;
+            background: rgba(39, 39, 42, 0.5);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tech-visual::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+        
+        .tech-grid-visual {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        
+        .tech-grid-visual > div {
+            width: 48px;
+            height: 48px;
+            background: rgba(99, 102, 241, 0.15);
+            border-radius: 12px;
+        }
+        
+        .tech-cta {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        /* Roadmap */
+        #roadmap { background: var(--background); }
+        
+        .roadmap-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--gold), rgba(243, 201, 119, 0.3), var(--gold));
+            transform: translateX(-50%);
+        }
+        
+        .roadmap-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 48px;
+            position: relative;
+        }
+        
+        .roadmap-item:nth-child(odd) { flex-direction: row; }
+        .roadmap-item:nth-child(even) { flex-direction: row-reverse; }
+        
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 24px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--bg);
+            transform: translateX(-50%);
+            z-index: 1;
+            box-shadow: 0 0 12px rgba(243, 201, 119, 0.4);
+        }
+        
+        .roadmap-item.completed::before {
+            background: var(--gold);
+            box-shadow: 0 0 12px rgba(243, 201, 119, 0.4);
+        }
+        
+        .roadmap-item.current::before {
+            background: var(--bg);
+            border-color: var(--gold);
+            box-shadow: 0 0 16px rgba(243, 201, 119, 0.6);
+        }
+        
+        .roadmap-item.upcoming::before {
+            background: var(--bg-soft);
+            border-color: rgba(243, 201, 119, 0.3);
+            box-shadow: none;
+        }
+        
+        .roadmap-content {
+            width: 45%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        
+        .roadmap-item.current .roadmap-content {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+        
+        .roadmap-item:nth-child(odd) .roadmap-content { margin-right: auto; text-align: right; }
+        .roadmap-item:nth-child(even) .roadmap-content { margin-left: auto; text-align: left; }
+        
+        .roadmap-phase {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .roadmap-item.completed .roadmap-phase {
+            background: rgba(243, 201, 119, 0.2);
+            color: var(--gold);
+        }
+        
+        .roadmap-item.current .roadmap-phase {
+            background: var(--gold);
+            color: #17120b;
+        }
+        
+        .roadmap-item.upcoming .roadmap-phase {
+            background: rgba(161, 161, 170, 0.2);
+            color: var(--muted);
+        }
+        
+        .roadmap-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .roadmap-content ul {
+            list-style: none;
+        }
+        
+        .roadmap-content li {
+            font-size: 14px;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        
+        .roadmap-content li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+        
+        .roadmap-item.upcoming .roadmap-content li::before {
+            background: var(--muted);
+        }
+        
+        /* Community */
+        #community {
+            background: linear-gradient(180deg, var(--background), rgba(99, 102, 241, 0.05), var(--background));
+        }
+        
+        .newsletter {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            text-align: center;
+        }
+        
+        .newsletter h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .newsletter p {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--background);
+            color: var(--foreground);
+            font-size: 14px;
+        }
+        
+        .newsletter-form input::placeholder { color: var(--muted); }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-brand p {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 16px 0 24px;
+            max-width: 280px;
+            line-height: 1.7;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            transition: color 0.2s;
+        }
+        
+        .social-links a:hover { color: var(--foreground); }
+        
+        .footer-links h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li { margin-bottom: 12px; }
+        
+        .footer-links a {
+            color: var(--muted);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover { color: var(--foreground); }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1120px) {
+            .site-header {
+                border-radius: 20px;
+                padding: 0.75rem 1rem;
+            }
+            
+            .site-nav {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                max-width: 100%;
+                font-size: clamp(3rem, 12vw, 5rem);
+            }
+            
+            .hero p {
+                margin: 24px auto;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .stat {
+                text-align: center;
+            }
+            
+            .hero-visual {
+                order: -1;
+            }
+            
+            .hero-visual img {
+                max-width: 400px;
+            }
+            
+            .three-up, .metric-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .marquee-band {
+                margin-top: 90px;
+            }
+            
+            .marquee-track span {
+                padding: 0 1.5rem;
+                font-size: 0.75rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .tech-card {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            
+            .tech-card:nth-child(even) { direction: ltr; }
+            .tech-visual { display: none; }
+            
+            .roadmap-timeline::before { display: none; }
+            .roadmap-item::before { display: none; }
+            
+            .roadmap-item, 
+            .roadmap-item:nth-child(odd), 
+            .roadmap-item:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .roadmap-content, 
+            .roadmap-item:nth-child(odd) .roadmap-content, 
+            .roadmap-item:nth-child(even) .roadmap-content {
+                width: 100%;
+                margin: 0;
+                text-align: left;
+            }
+            
+            .features-grid,
+            .three-up,
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .feature-card,
+            .tech-card,
+            .roadmap-item {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .site-header {
+                top: 10px;
+                padding: 0.6rem 1rem;
+            }
+            
+            .brand-copy small {
+                display: none;
+            }
+            
+            .header-cta {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .hero {
+                padding-top: 7rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stat-value {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* ========== 动画效果 ========== */
+        
+        /* 粒子背景 */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        
+        /* 浮动光晕 - 静止不动 */
+        .hero-floating-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 60%);
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: none;
+            pointer-events: none;
+        }
+        
+        /* 文字逐字显示 */
+        .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .char.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 滚动触发动画 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Feature卡片依次出现 */
+        .feature-card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Roadmap渐现 */
+        .roadmap-item {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        
+        .roadmap-item:nth-child(even) {
+            transform: translateX(30px);
+        }
+        
+        .roadmap-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Section标题动画 */
+        .section-header {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .section-header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 统计数字动画 */
+        .stat-value {
+            transition: color 0.3s ease;
+        }
+        
+        .stat:hover .stat-value {
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+        }
+        
+        /* Tech卡片渐现 */
+        .tech-card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        
+        .tech-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Newsletter渐现 */
+        .newsletter {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .newsletter.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* 按钮脉冲效果 */
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+        }
+        
+        .btn-primary {
+            animation: pulse 3s infinite;
+        }
+        
+        /* 网格背景流动 */
+        .hero-grid {
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(60px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toast"></div>
+    <!-- Background Effects -->
+    <canvas id="bg-canvas" class="particle-canvas"></canvas>
+    <div class="pointer-glow"></div>
+    <div class="page-noise"></div>
+    <div class="page-glow glow-a"></div>
+    <div class="page-glow glow-b"></div>
+    <div class="page-grid"></div>
+    
+    <!-- New Professional Header -->
+    <header class="site-header">
+        <a class="brand-mark" href="#top">
+            <span class="brand-monogram">BN</span>
+            <span class="brand-copy">
+                <strong>BitNova</strong>
+                <small>Layer 1 Blockchain</small>
+            </span>
+        </a>
+        
+        <nav class="site-nav">
+            <a href="#about" class="nav-about" data-i18n="about">About</a>
+            <a href="#ecosystem" class="nav-features" data-i18n="features">Features</a>
+            <a href="#technology" class="nav-technology" data-i18n="technology">Technology</a>
+            <a href="#roadmap" class="nav-roadmap" data-i18n="roadmap">Roadmap</a>
+            <a href="#community" class="nav-faq" data-i18n="faq">FAQ</a>
+        </nav>
+        
+        <a class="header-cta" href="javascript:void(0)" data-i18n="launch_app">Launch App</a>
+    </header>
+    
+    <!-- Marquee Band -->
+    <div class="marquee-band">
+        <div class="marquee-track">
+            <span>100K+ TPS</span>
+            <span>Sub-Second Finality</span>
+            <span>EVM Compatible</span>
+            <span>Cross-Chain Bridge</span>
+            <span>Enterprise Grade</span>
+            <span>100K+ TPS</span>
+            <span>Sub-Second Finality</span>
+            <span>EVM Compatible</span>
+            <span>Cross-Chain Bridge</span>
+            <span>Enterprise Grade</span>
+        </div>
+    </div>
+    
+    <!-- Legacy Header (Hidden) -->
+    <header style="display:none;">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <div class="logo-icon">BN</div>
+                BitNova
+            </a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#ecosystem">Ecosystem</a>
+                <a href="#technology">Technology</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#community">Community</a>
+            </nav>
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="btn btn-outline">Whitepaper</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="about">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-floating-glow"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 id="hero-title"><span class="hero-title-1" data-i18n="hero_title_1">The Next Generation</span> <span class="hero-title-2" data-i18n="hero_title_2">Layer 1</span> <span class="hero-title-3" data-i18n="hero_title_3">Infrastructure</span></h1>
+                <p class="hero-desc" data-i18n="hero_desc">BitNova is a high-performance Layer 1 blockchain built for the future of Web3. With groundbreaking consensus, sub-second finality, and enterprise-grade infrastructure.</p>
+                <div class="hero-buttons" id="heroButtons">
+                    <a href="https://twitter.com/bitnova" class="btn btn-primary" target="_blank">Follow Twitter</a>
+                    <a href="https://t.me/bitnova" class="btn btn-outline" target="_blank">Join Telegram</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">100K+</div>
+                        <div class="stat-label">TPS</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">$2B+</div>
+                        <div class="stat-label">Total Value Locked</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">500+</div>
+                        <div class="stat-label">DApps</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">1s</div>
+                        <div class="stat-label">Finality</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=500&fit=crop" alt="Blockchain Technology" />
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Features -->
+    <section id="ecosystem">
+        <div class="container">
+            <div class="section-header" id="features-header">
+                <span class="section-tag" data-i18n="features_tag">CORE FEATURES</span>
+                <h2 class="features-title" data-i18n="features_title">Built for the Next Generation Blockchain</h2>
+                <p data-i18n="features_desc">BitNova combines cutting-edge technology with enterprise-grade infrastructure to deliver a high-performance Layer 1 blockchain.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-delay="0">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-i18n="feature1_title">High-Throughput Consensus</h3>
+                    <p data-i18n="feature1_desc">Innovative consensus mechanism delivers 100K+ TPS with sub-second finality.</p>
+                </div>
+                <div class="feature-card" data-delay="100">
+                    <div class="feature-icon">🔗</div>
+                    <h3 data-i18n="feature2_title">EVM Compatible</h3>
+                    <p data-i18n="feature2_desc">Seamlessly migrate existing dApps and developer tools from Ethereum.</p>
+                </div>
+                <div class="feature-card" data-delay="200">
+                    <div class="feature-icon">💰</div>
+                    <h3 data-i18n="feature3_title">Low Fees</h3>
+                    <p data-i18n="feature3_desc">Transaction fees as low as $0.001, making high-frequency use cases viable.</p>
+                </div>
+                <div class="feature-card" data-delay="300">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 data-i18n="feature4_title">Enterprise Grade</h3>
+                    <p data-i18n="feature4_desc">Built for institutional adoption with compliance-ready infrastructure.</p>
+                </div>
+                <div class="feature-card" data-delay="400">
+                    <div class="feature-icon">🌐</div>
+                    <h3 data-i18n="feature5_title">Cross-Chain Bridge</h3>
+                    <p data-i18n="feature5_desc">Seamlessly transfer assets across multiple blockchain networks.</p>
+                </div>
+                <div class="feature-card" data-delay="500">
+                    <div class="feature-icon">🌐</div>
+                    <h3 data-i18n="feature6_title">Decentralized Governance</h3>
+                    <p data-i18n="feature6_desc">Community-driven protocol decisions through transparent on-chain voting mechanisms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section id="technology">
+        <div class="container">
+            <div class="section-header" id="tech-header">
+                <span class="section-tag" data-i18n="tech_tag">TECHNOLOGY</span>
+                <h2 class="tech-title" data-i18n="tech_title">Cutting-Edge Infrastructure</h2>
+                <p data-i18n="tech_subtitle">Powered by advanced technology stack designed for performance, security, and scalability.</p>
+            </div>
+            <div class="tech-cards">
+                <div class="tech-card" data-delay="0">
+                    <div>
+                        <span class="tag" data-i18n="tech1_tag">CONSENSUS</span>
+                        <h3 data-i18n="tech1_title">High-Throughput Consensus Engine</h3>
+                        <p data-i18n="tech1_desc">BitNova's innovative Proof-of-Stake consensus mechanism delivers 100,000+ TPS with sub-second finality. Validators are randomly selected through cryptographic sortition, ensuring both high performance and true decentralization.</p>
+                        <div class="tech-stats">
+                            <div>
+                                <div class="tech-stat-value">100K+</div>
+                                <div class="tech-stat-label" data-i18n="tech1_stat1">TPS Capacity</div>
+                            </div>
+                            <div>
+                                <div class="tech-stat-value">&lt;1s</div>
+                                <div class="tech-stat-label" data-i18n="tech1_stat2">Finality</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-visual">
+                        <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                            <defs>
+                                <linearGradient id="consensusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.4" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" rx="16" fill="#27272a"/>
+                            <!-- 中心主节点 -->
+                            <circle cx="200" cy="112" r="30" fill="url(#consensusGrad)" stroke="#6366f1" stroke-width="2"/>
+                            <text x="200" y="118" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">B</text>
+                            <!-- 周围验证者节点 -->
+                            <circle cx="120" cy="70" r="18" fill="#18181b" stroke="#6366f1" stroke-width="2"/>
+                            <text x="120" y="75" text-anchor="middle" fill="#6366f1" font-size="10">V1</text>
+                            <circle cx="280" cy="70" r="18" fill="#18181b" stroke="#8b5cf6" stroke-width="2"/>
+                            <text x="280" y="75" text-anchor="middle" fill="#8b5cf6" font-size="10">V2</text>
+                            <circle cx="120" cy="155" r="18" fill="#18181b" stroke="#ec4899" stroke-width="2"/>
+                            <text x="120" y="160" text-anchor="middle" fill="#ec4899" font-size="10">V3</text>
+                            <circle cx="280" cy="155" r="18" fill="#18181b" stroke="#6366f1" stroke-width="2"/>
+                            <text x="280" y="160" text-anchor="middle" fill="#6366f1" font-size="10">V4</text>
+                            <!-- 连接线 -->
+                            <path d="M138 78 L170 95" stroke="#6366f1" stroke-width="1.5" opacity="0.6"/>
+                            <path d="M262 78 L230 95" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+                            <path d="M138 147 L170 130" stroke="#ec4899" stroke-width="1.5" opacity="0.6"/>
+                            <path d="M262 147 L230 130" stroke="#6366f1" stroke-width="1.5" opacity="0.6"/>
+                            <!-- 区块 -->
+                            <rect x="320" y="100" width="50" height="40" rx="6" fill="#18181b" stroke="#10b981" stroke-width="1.5"/>
+                            <text x="345" y="125" text-anchor="middle" fill="#10b981" font-size="10">#1024</text>
+                            <!-- 数据流动画 -->
+                            <circle cx="150" cy="85" r="3" fill="#6366f1">
+                                <animate attributeName="cx" values="138;170;200" dur="2s" repeatCount="indefinite"/>
+                                <animate attributeName="cy" values="78;95;112" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tech-card" data-delay="200">
+                    <div>
+                        <span class="tag" data-i18n="tech2_tag">EXECUTION</span>
+                        <h3 data-i18n="tech2_title">EVM-Compatible Runtime</h3>
+                        <p data-i18n="tech2_desc">Fully compatible with Ethereum Virtual Machine, BitNova supports all Solidity smart contracts without code changes. Our optimized execution engine delivers 10x faster contract execution while maintaining bytecode-level compatibility.</p>
+                        <div class="tech-stats">
+                            <div>
+                                <div class="tech-stat-value">100%</div>
+                                <div class="tech-stat-label" data-i18n="tech2_stat1">EVM Compatible</div>
+                            </div>
+                            <div>
+                                <div class="tech-stat-value">10x</div>
+                                <div class="tech-stat-label" data-i18n="tech2_stat2">Faster Execution</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-visual">
+                        <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                            <defs>
+                                <linearGradient id="evmGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#6366f1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" rx="16" fill="#27272a"/>
+                            <!-- EVM容器 -->
+                            <rect x="130" y="60" width="140" height="105" rx="12" fill="#18181b" stroke="url(#evmGrad)" stroke-width="2"/>
+                            <text x="200" y="85" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">EVM Runtime</text>
+                            <!-- 字节码层 -->
+                            <rect x="145" y="95" width="110" height="25" rx="4" fill="#27272a" stroke="#6366f1" stroke-width="1"/>
+                            <text x="200" y="112" text-anchor="middle" fill="#a1a1aa" font-size="10">Bytecode</text>
+                            <!-- 执行层 -->
+                            <rect x="145" y="125" width="110" height="25" rx="4" fill="#27272a" stroke="#8b5cf6" stroke-width="1"/>
+                            <text x="200" y="142" text-anchor="middle" fill="#a1a1aa" font-size="10">Execution</text>
+                            <!-- 左侧：Solidity代码 -->
+                            <rect x="40" y="80" width="70" height="65" rx="8" fill="#18181b" stroke="#6366f1" stroke-width="1.5"/>
+                            <text x="75" y="100" text-anchor="middle" fill="#6366f1" font-size="10" font-weight="600">.sol</text>
+                            <rect x="50" y="110" width="50" height="4" rx="2" fill="#6366f1" opacity="0.5"/>
+                            <rect x="50" y="118" width="35" height="4" rx="2" fill="#6366f1" opacity="0.3"/>
+                            <rect x="50" y="126" width="45" height="4" rx="2" fill="#6366f1" opacity="0.4"/>
+                            <!-- 右侧：状态 -->
+                            <rect x="290" y="80" width="70" height="65" rx="8" fill="#18181b" stroke="#10b981" stroke-width="1.5"/>
+                            <text x="325" y="100" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600">State</text>
+                            <circle cx="310" cy="120" r="4" fill="#10b981" opacity="0.6"/>
+                            <circle cx="325" cy="120" r="4" fill="#10b981" opacity="0.6"/>
+                            <circle cx="340" cy="120" r="4" fill="#10b981" opacity="0.6"/>
+                            <!-- 连接线 -->
+                            <path d="M110 112 L130 112" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,2" opacity="0.6">
+                                <animate attributeName="stroke-dashoffset" values="0;6" dur="1s" repeatCount="indefinite"/>
+                            </path>
+                            <path d="M270 112 L290 112" stroke="#10b981" stroke-width="2" stroke-dasharray="4,2" opacity="0.6">
+                                <animate attributeName="stroke-dashoffset" values="6;0" dur="1s" repeatCount="indefinite"/>
+                            </path>
+                            <!-- 速度指示 -->
+                            <text x="200" y="185" text-anchor="middle" fill="#8b5cf6" font-size="12" font-weight="600">10x Faster</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tech-card" data-delay="400">
+                    <div>
+                        <span class="tag" data-i18n="tech3_tag">INTEROPERABILITY</span>
+                        <h3 data-i18n="tech3_title">Native Cross-Chain Bridge</h3>
+                        <p data-i18n="tech3_desc">BitNova's native cross-chain messaging protocol enables seamless asset transfers and message passing between Ethereum, Bitcoin, and other major Layer 1 networks. Built on threshold signature technology for maximum security.</p>
+                        <div class="tech-stats">
+                            <div>
+                                <div class="tech-stat-value">12+</div>
+                                <div class="tech-stat-label" data-i18n="tech3_stat1">Chains</div>
+                            </div>
+                            <div>
+                                <div class="tech-stat-value">3 sec</div>
+                                <div class="tech-stat-label" data-i18n="tech3_stat2">Bridge Time</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-visual">
+                        <svg viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+                            <defs>
+                                <linearGradient id="chainGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#6366f1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6" />
+                                </linearGradient>
+                                <linearGradient id="chainGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#ec4899" />
+                                    <stop offset="100%" style="stop-color:#f43f5e" />
+                                </linearGradient>
+                                <linearGradient id="chainGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#10b981" />
+                                    <stop offset="100%" style="stop-color:#34d399" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="225" rx="16" fill="#27272a"/>
+                            <!-- 左侧区块链 -->
+                            <rect x="60" y="80" width="80" height="65" rx="8" fill="url(#chainGrad1)" opacity="0.3"/>
+                            <rect x="70" y="90" width="60" height="45" rx="4" fill="url(#chainGrad1)" opacity="0.8"/>
+                            <text x="100" y="118" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">ETH</text>
+                            
+                            <!-- 中间桥梁协议 -->
+                            <circle cx="200" cy="112" r="35" fill="#18181b" stroke="#fbbf24" stroke-width="2"/>
+                            <text x="200" y="108" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="600">Bridge</text>
+                            <text x="200" y="120" text-anchor="middle" fill="#a1a1aa" font-size="7">Protocol</text>
+                            
+                            <!-- 右侧区块链 -->
+                            <rect x="260" y="80" width="80" height="65" rx="8" fill="url(#chainGrad3)" opacity="0.3"/>
+                            <rect x="270" y="90" width="60" height="45" rx="4" fill="url(#chainGrad3)" opacity="0.8"/>
+                            <text x="300" y="118" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">BN</text>
+                            
+                            <!-- 连接线 -->
+                            <path d="M140 105 L165 105" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,2" opacity="0.6">
+                                <animate attributeName="stroke-dashoffset" from="0" to="6" dur="1s" repeatCount="indefinite"/>
+                            </path>
+                            <path d="M140 120 L165 120" stroke="#ec4899" stroke-width="2" stroke-dasharray="4,2" opacity="0.6">
+                                <animate attributeName="stroke-dashoffset" from="6" to="0" dur="1s" repeatCount="indefinite"/>
+                            </path>
+                            
+                            <path d="M235 105 L260 105" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,2" opacity="0.6">
+                                <animate attributeName="stroke-dashoffset" from="0" to="6" dur="1s" repeatCount="indefinite"/>
+                            </path>
+                            <path d="M235 120 L260 120" stroke="#10b981" stroke-width="2" stroke-dasharray="4,2" opacity="0.6">
+                                <animate attributeName="stroke-dashoffset" from="6" to="0" dur="1s" repeatCount="indefinite"/>
+                            </path>
+                            
+                            <!-- 多链支持标识 -->
+                            <text x="200" y="175" text-anchor="middle" fill="#a1a1aa" font-size="10">12+ Chains Supported</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-cta">
+                <button class="btn btn-primary" data-i18n="tech_cta">Explore Documentation →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap">
+        <div class="container">
+            <div class="section-header" id="roadmap-header">
+                <span class="section-tag" data-i18n="roadmap_tag">ROADMAP</span>
+                <h2 class="roadmap-title" data-i18n="roadmap_title">Our Journey Forward</h2>
+                <p data-i18n="roadmap_subtitle">A clear path to building the most comprehensive Layer 1 blockchain infrastructure.</p>
+            </div>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item completed" data-delay="0">
+                    <div class="roadmap-content">
+                        <span class="roadmap-phase" data-i18n="rm1_phase">Phase 1</span>
+                        <h3 data-i18n="rm1_title">Foundation</h3>
+                        <ul data-i18n-list="rm1_items">
+                            <li>Core protocol development</li>
+                            <li>Security audits completed</li>
+                            <li>Token generation event</li>
+                            <li>Initial DEX offering</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-item completed" data-delay="150">
+                    <div class="roadmap-content">
+                        <span class="roadmap-phase" data-i18n="rm2_phase">Phase 2</span>
+                        <h3 data-i18n="rm2_title">Expansion</h3>
+                        <ul data-i18n-list="rm2_items">
+                            <li>Multi-chain deployment</li>
+                            <li>Governance launch</li>
+                            <li>Strategic partnerships</li>
+                            <li>100K users milestone</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-item current" data-delay="300">
+                    <div class="roadmap-content">
+                        <span class="roadmap-phase" data-i18n="rm3_phase">Phase 3</span>
+                        <h3 data-i18n="rm3_title">Innovation</h3>
+                        <ul data-i18n-list="rm3_items">
+                            <li>Sharding implementation V2</li>
+                            <li>Cross-chain bridges</li>
+                            <li>Institutional products</li>
+                            <li>Mobile wallet launch</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-item upcoming" data-delay="450">
+                    <div class="roadmap-content">
+                        <span class="roadmap-phase" data-i18n="rm4_phase">Phase 4</span>
+                        <h3 data-i18n="rm4_title">Domination</h3>
+                        <ul data-i18n-list="rm4_items">
+                            <li>DAO treasury expansion</li>
+                            <li>Real-world asset integration</li>
+                            <li>Layer 2 deployment</li>
+                            <li>Global expansion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community -->
+    <section id="community">
+        <div class="container">
+            <div class="section-header" id="community-header">
+                <span class="section-tag" data-i18n="community_tag">COMMUNITY</span>
+                <h2 class="community-title" data-i18n="community_title">Join the BitNova Community</h2>
+                <p data-i18n="community_desc">Connect with thousands of users, developers, and enthusiasts building the future of decentralized finance together.</p>
+            </div>
+            <div class="newsletter" id="newsletter-box">
+                <h3 data-i18n="newsletter_title">Stay Updated</h3>
+                <p data-i18n="newsletter_desc">Subscribe to our newsletter for the latest updates and announcements.</p>
+                <form class="newsletter-form">
+                    <input type="email" data-i18n-placeholder="newsletter_placeholder" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary" data-i18n="newsletter_btn">Subscribe →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Switch Button -->
+    <button class="lang-switch" onclick="toggleLanguage()">
+        <span class="lang-icon">🌐</span>
+        <span class="lang-text">中文</span>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <div class="logo-icon">BN</div>
+                        BitNova
+                    </a>
+                    <p data-i18n="footer_desc">The next-generation Layer 1 blockchain infrastructure. Powering high-performance Web3 applications with 100K+ TPS, sub-second finality, and seamless cross-chain interoperability.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Discord">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_protocol">Protocol</h4>
+                    <ul data-i18n-list="footer_protocol_items">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#ecosystem">Ecosystem</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_resources">Resources</h4>
+                    <ul data-i18n-list="footer_resource_items">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Whitepaper</a></li>
+                        <li><a href="#">Audit Reports</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 BitNova. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        // 动态设置社交链接
+        if (typeof config !== 'undefined') {
+            const headerButtons = document.getElementById('headerButtons');
+            const heroButtons = document.getElementById('heroButtons');
+            
+            if (config.twitter || config.telegram) {
+                let headerHtml = '';
+                let heroHtml = '';
+                
+                if (config.telegram) {
+                    headerHtml += `<a href="${config.telegram}" class="btn btn-primary" target="_blank">Join</a>`;
+                    heroHtml += `<a href="${config.telegram}" class="btn btn-primary" target="_blank">Get Started</a>`;
+                }
+                
+                if (config.twitter) {
+                    headerHtml += `<a href="${config.twitter}" class="btn btn-outline" target="_blank">Twitter</a>`;
+                    heroHtml += `<a href="${config.twitter}" class="btn btn-outline" target="_blank">Twitter</a>`;
+                }
+                
+                if (headerButtons) headerButtons.innerHTML = headerHtml;
+                if (heroButtons) heroButtons.innerHTML = heroHtml;
+            }
+        }
+        
+        // ========== 动画效果 ==========
+        
+        // 1. 粒子背景
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId;
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        
+        function createParticles() {
+            particles = [];
+            const particleCount = Math.min(50, Math.floor(window.innerWidth / 30));
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 2 + 1,
+                    opacity: Math.random() * 0.5 + 0.2
+                });
+            }
+        }
+        
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach((particle, i) => {
+                // 更新位置
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+                
+                // 边界处理
+                if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+                if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+                
+                // 绘制粒子 - Gold color
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(243, 201, 119, ${particle.opacity})`;
+                ctx.fill();
+                
+                // 连接线 - Gold color
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[j].x - particle.x;
+                    const dy = particles[j].y - particle.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(particle.x, particle.y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(243, 201, 119, ${0.08 * (1 - distance / 150)})`;
+                        ctx.stroke();
+                    }
+                }
+            });
+            
+            animationId = requestAnimationFrame(drawParticles);
+        }
+        
+        // 2. 文字逐字显示
+        function splitTextToChars(element) {
+            const text = element.textContent;
+            element.innerHTML = '';
+            text.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                span.style.transitionDelay = `${index * 0.03}s`;
+                element.appendChild(span);
+            });
+        }
+        
+        // 3. 数字计数动画
+        function animateCounter(element, target, suffix = '', prefix = '') {
+            const duration = 2000;
+            const start = 0;
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(start + (target - start) * easeProgress);
+                
+                element.textContent = prefix + formatNumber(current) + suffix;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    element.textContent = prefix + formatNumber(target) + suffix;
+                }
+            }
+            
+            requestAnimationFrame(update);
+        }
+        
+        function formatNumber(num) {
+            if (num >= 1000000000) return (num / 1000000000).toFixed(1) + 'B';
+            if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+            if (num >= 1000) return (num / 1000).toFixed(0) + 'K';
+            return num.toString();
+        }
+        
+        // 4. Intersection Observer 滚动触发动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.dataset.delay || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+                }
+            });
+        }, observerOptions);
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 初始化粒子背景
+            resizeCanvas();
+            createParticles();
+            drawParticles();
+            
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                createParticles();
+            });
+            
+            // Hero标题逐字显示
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) {
+                // 保存原始的HTML结构（保留span）
+                const originalHTML = heroTitle.innerHTML;
+                heroTitle.innerHTML = '';
+                
+                // 逐字处理，但保留span标签
+                let delay = 0;
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = originalHTML;
+                
+                function processNode(node, parent) {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        node.textContent.split('').forEach(char => {
+                            const span = document.createElement('span');
+                            span.className = 'char';
+                            span.textContent = char === ' ' ? '\u00A0' : char;
+                            span.style.transitionDelay = `${delay * 0.03}s`;
+                            parent.appendChild(span);
+                            delay++;
+                        });
+                    } else if (node.nodeType === Node.ELEMENT_NODE) {
+                        const newElement = document.createElement(node.tagName);
+                        Array.from(node.attributes).forEach(attr => {
+                            newElement.setAttribute(attr.name, attr.value);
+                        });
+                        parent.appendChild(newElement);
+                        Array.from(node.childNodes).forEach(child => {
+                            processNode(child, newElement);
+                        });
+                    }
+                }
+                
+                Array.from(tempDiv.childNodes).forEach(node => {
+                    processNode(node, heroTitle);
+                });
+                
+                // 触发显示动画
+                setTimeout(() => {
+                    heroTitle.querySelectorAll('.char').forEach(char => {
+                        char.classList.add('visible');
+                    });
+                }, 300);
+            }
+            
+            // Hero描述和按钮渐显
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                const p = heroContent.querySelector('p');
+                const buttons = heroContent.querySelector('.hero-buttons');
+                const stats = heroContent.querySelector('.hero-stats');
+                
+                if (p) {
+                    p.style.opacity = '0';
+                    p.style.transform = 'translateY(20px)';
+                    p.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    setTimeout(() => {
+                        p.style.opacity = '1';
+                        p.style.transform = 'translateY(0)';
+                    }, 800);
+                }
+                
+                if (buttons) {
+                    buttons.style.opacity = '0';
+                    buttons.style.transform = 'translateY(20px)';
+                    buttons.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    setTimeout(() => {
+                        buttons.style.opacity = '1';
+                        buttons.style.transform = 'translateY(0)';
+                    }, 1000);
+                }
+                
+                if (stats) {
+                    stats.style.opacity = '0';
+                    stats.style.transform = 'translateY(20px)';
+                    stats.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    setTimeout(() => {
+                        stats.style.opacity = '1';
+                        stats.style.transform = 'translateY(0)';
+                        
+                        // 统计数字计数动画
+                        setTimeout(() => {
+                            const statValues = stats.querySelectorAll('.stat-value');
+                            statValues.forEach(stat => {
+                                const text = stat.textContent;
+                                // 提取数字（支持 $2B+ 格式）
+                                const numMatch = text.match(/[\d.]+/);
+                                if (!numMatch) return;
+                                
+                                const num = parseFloat(numMatch[0]);
+                                if (text.includes('K')) {
+                                    animateCounter(stat, num * 1000, '+');
+                                } else if (text.includes('B')) {
+                                    animateCounter(stat, num * 1000000000, '+', '$');
+                                } else if (text.includes('M')) {
+                                    animateCounter(stat, num * 1000000, '+', '$');
+                                } else if (text.includes('500')) {
+                                    animateCounter(stat, 500, '+');
+                                }
+                            });
+                        }, 500);
+                    }, 1200);
+                }
+            }
+            
+            // 观察Feature卡片
+            document.querySelectorAll('.feature-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            // 观察Tech卡片
+            document.querySelectorAll('.tech-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            // 观察Roadmap项目
+            document.querySelectorAll('.roadmap-item').forEach(item => {
+                observer.observe(item);
+            });
+            
+            // 观察Section headers
+            const sectionHeaders = ['features-header', 'tech-header', 'roadmap-header', 'community-header'];
+            sectionHeaders.forEach(id => {
+                const header = document.getElementById(id);
+                if (header) {
+                    header.classList.add('section-header');
+                    observer.observe(header);
+                }
+            });
+            
+            // 观察Newsletter
+            const newsletter = document.getElementById('newsletter-box');
+            if (newsletter) {
+                observer.observe(newsletter);
+            }
+        });
+        
+        // 页面卸载时清理动画
+        window.addEventListener('beforeunload', () => {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+        });
+        
+        // ===== GSAP Animations =====
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Mouse glow effect
+        const pointerGlow = document.querySelector('.pointer-glow');
+        if (pointerGlow) {
+            document.addEventListener('mousemove', (e) => {
+                pointerGlow.style.opacity = '1';
+                pointerGlow.style.left = e.clientX + 'px';
+                pointerGlow.style.top = e.clientY + 'px';
+            });
+            
+            document.addEventListener('mouseleave', () => {
+                pointerGlow.style.opacity = '0';
+            });
+        }
+        
+        // Scroll reveal animations
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach((el, i) => {
+            gsap.fromTo(el, 
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+});
+         
+        // Parallax for glows
+        gsap.to('.glow-a', {
+            y: -100,
+            scrollTrigger: {
+                trigger: 'body',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1
+            }
+        });
+        
+        gsap.to('.glow-b', {
+            y: 100,
+            scrollTrigger: {
+                trigger: 'body',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1
+            }
+        });
+        
+        // Launch App toast notification
+        const toastEl = document.getElementById('toast');
+        const headerCta = document.querySelector('.header-cta');
+        if (headerCta) {
+            headerCta.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = i18n[currentLang];
+                toastEl.textContent = lang.launch_toast;
+                toastEl.classList.add('show');
+                setTimeout(() => {
+                    toastEl.classList.remove('show');
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>

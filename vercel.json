@@ -1,0 +1,8 @@
+{
+  "builds": [
+    { "src": "BitNova.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/BitNova.html" }
+  ]
+}
